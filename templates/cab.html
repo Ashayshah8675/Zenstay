@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header mb-5 p-0" style="background-image: url({% static 'img/carousel-1.jpg' %});">
+            <div class="container-fluid page-header-inner py-5">
+                <div class="container text-center pb-5">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">CAB SERVICES</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Cab</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+        <!-- Booking Start -->
+
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 bg-light align-items-center">
+                    <div class="col-lg-6">
+                        <div class="row g-2">
+                            <div class="image">
+                                <img src="{% static 'img/local-sight.jpg' %}" width="600" height="400" class="img-fluid" data-bs-target="#imageModal">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h5 class="section-title ff-secondary text-start text-primary fw-normal">Taxi & Cab Services</h5>
+                        <h2 class="mb-4">Looking For Local Sightseeing?<span class="text-primary text-uppercase"></span></h2>
+                        <p class="mb-4">"Explore the city with ease and comfort through our premier cab services tailored for local sightseeing adventures. Enjoy hassle-free travel to iconic landmarks, hidden gems, and vibrant neighborhoods, all with the convenience of our reliable and professional drivers."</p>
+                        <div class="row g-4 mb-4">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center border-start border-5 border-primary px-3">
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">20</h1>
+                                    <div class="ps-4">
+                                        <p class="mb-0">+</p>
+                                        <h6 class="text-uppercase mb-0">Cab Drivers</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center border-start border-5 border-primary px-3">
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">50</h1>
+                                    <div class="ps-4">
+                                        <p class="mb-0">+</p>
+                                        <h6 class="text-uppercase mb-0">Destinations</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="col-lg-6 btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="container-xxl py-5 px-0 wow zoomIn" data-wow-delay="0.1s">
+            <div class="row g-0">
+                <div class="col-md-6 bg-dark d-flex align-items-center">
+                    <div class="p-5">
+                        <h6 class="section-title text-start text-white text-uppercase mb-3">Zen Cabs</h6>
+                        <h2 class="text-white mb-4">Need Airport Pick Up/Drop ?</h2>
+                        <p class="text-white mb-4">Choose Your convenience for an Airport Taxi Pickup or Drop directly to and from ZenStay Resorts.</p>
+                        <form method='POST' >
+                            {% csrf_token %}
+                        <div class="row mb-3">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+                                    <label for="name">Your Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating date" id="date3" data-target-input="nearest">
+                                    <input type="date" name="date" class="form-control datetimepicker-input" data-target="#date1" data-toggle="datetimepicker" />
+                                    <label for="checkin">Pickup/Drop Date</label>
+                                    
+                                </div>
+                            </div>
+                        </div>                            
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" name="number" id="phone" placeholder="Contact Number" pattern="[0-9]{10}" required>
+                                    <label for="name">Contact Number</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    
+                                    <input type="time" name="time" class="form-control datetimepicker-input" data-target="#date1" data-toggle="datetimepicker" />
+                                    <label for="checkin">Pickup/Drop Date</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <select class="form-select" name="airport" id="airport" aria-label="Select Airport">
+                                        <option selected disabled>Select Airport</option>
+                                        <option value="DEL">Indira Gandhi International Airport (DEL)</option>
+                                        <option value="BOM">Chhatrapati Shivaji Maharaj International Airport (BOM)</option>
+                                        <option value="BLR">Kempegowda International Airport (BLR)</option>
+                                        <option value="MAA">Chennai International Airport (MAA)</option>
+                                        <!-- Add more options for other major airports in India -->
+                                    </select>
+                                    <label for="airport">Airport Name</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
+                        </div>
+                        </form>
+                        <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">View More</a>
+                        <a href="" class="btn btn-light py-md-3 px-md-5">Book Now</a> -->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="image">
+                        <img src="{% static 'img/airport.jpg' %}" class="img-fluid" data-bs-target="#imageModal">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase">EVENTS & PARTY</h6>
+                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">EVENT SERVICES</span></h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="{% static 'img/event-22.jpg' %}" alt="">
+                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">INQUIRE</small>
+                            </div>
+                            <div class="p-4 mt-2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0">Weddings</h5>
+                                </div>
+                                <p class="text-body mb-3">Transform your wedding into a serene affair amidst our Zen-inspired space, offering a harmonious blend of elegance and tranquility for your special day. Create unforgettable memories surrounded by peaceful ambiance and timeless sophistication.</p>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="{% static 'img/event-11.jpg' %}" alt="">
+                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">INQUIRE</small>
+                            </div>
+                            <div class="p-4 mt-2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0">Corporate Events</h5>
+                                </div> 
+                                <p class="text-body mb-3">Elevate your corporate events at our space, where modern sophistication meets serene ambiance, providing an ideal setting for productive meetings and memorable gatherings. Let the tranquil atmosphere inspire creativity and foster meaningful connections among your team.</p>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="{% static 'img/event-33.jpg' %}" alt="">
+                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">INQUIRE</small>
+                            </div>
+                            <div class="p-4 mt-2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0">Holiday Parties</h5>
+                                </div>
+                                <p class="text-body mb-3">Immerse yourself in the festive spirit at our Zen-inspired space, the perfect venue for holiday parties where modern elegance meets tranquil ambiance. Create lasting and forever memories with your special ones surrounded by serene surroundings and joyful celebrations.</p>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        {% endblock content %}

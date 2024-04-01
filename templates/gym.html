@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header mb-5 p-0" style="background-image: url({% static 'img/carousel-2.jpg' %});">
+            <div class="container-fluid page-header-inner py-5">
+                <div class="container text-center pb-5">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">GYM & Fitness</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Gym</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+        <!-- Booking Start -->
+
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="row g-2">
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-85 wow zoomIn" data-wow-delay="0.1s" src="{% static 'img/gym-3.jpg' %}" style="margin-top: 30%;">
+                            </div>
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-85 wow zoomIn" data-wow-delay="0.3s" src="{% static 'img/gym-2.jpg' %}" style="margin-top: 30%;">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-85 wow zoomIn" data-wow-delay="0.5s" src="{% static 'img/gym-1.jpg' %}">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="{% static 'img/gym-4.jpg' %}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h5 class="section-title ff-secondary text-start text-primary fw-normal">Gym & Yoga Space</h5>
+                        <h1 class="mb-4">Fitness Center : <span class="text-primary text-uppercase"></span>Zen Fitness</h1>
+                        <p class="mb-4">"Elevate your wellness journey at Zen Fitness, our exclusive resort fitness center where state-of-the-art equipment meets expert guidance for a revitalizing workout experience. Discover a sanctuary for rejuvenation, where personalized fitness programs and tranquil surroundings inspire your mind, body, and soul."</p>
+                        <div class="row g-4 mb-4">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center border-start border-5 border-primary px-3">
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">50</h1>
+                                    <div class="ps-4">
+                                        <p class="mb-0">+  Equipments</p>
+                                        <h6 class="text-uppercase mb-0">Trainers</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center border-start border-5 border-primary px-3">
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">20</h1>
+                                    <div class="ps-4">
+                                        <p class="mb-0">+  Popular</p>
+                                        <h6 class="text-uppercase mb-0">Facilities</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="container-xxl py-5 px-0 wow zoomIn" data-wow-delay="0.1s">
+            <div class="row g-0">
+                <div class="col-md-6 bg-dark d-flex align-items-center">
+                    <div class="p-5">
+                        <h6 class="section-title text-start text-white text-uppercase mb-3">ENTHUSIASM</h6>
+                        <h1 class="text-white mb-4">Build and Workout Together</h1>
+                        <p class="text-white mb-4">"Elevate your events with our Zen-inspired space—a tranquil oasis blending modern elegance and serene ambiance, perfect for unforgettable gatherings."</p>
+                        <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">View More</a>
+                        <a href="" class="btn btn-light py-md-3 px-md-5">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="image">
+                        <img src="{% static 'img/gym-retreat.jpg' %}" width="800" height="400" class="img-fluid" data-bs-target="#imageModal">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase">GYM & FITNESS</h6>
+                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Zen Fitness</span></h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="{% static 'img/sauna.jpg' %}" alt="">
+                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">INQUIRE</small>
+                            </div>
+                            <div class="p-4 mt-2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0">Sauna </h5>
+                                </div>
+                                <p class="text-body mb-3">
+                                    "Indulge in blissful relaxation at our resort's sauna space, where tranquil ambiance and soothing heat combine for a rejuvenating escape."</p>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="{% static 'img/swim.jpg' %}" alt="">
+                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">INQUIRE</small>
+                            </div>
+                            <div class="p-4 mt-2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0">Swimming Pool</h5>
+                                </div> 
+                                <p class="text-body mb-3">
+                                    "Dive into relaxation at our resort's swimming pool, where crystal-clear waters beckon for a refreshing escape under the sun."</p>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="{% static 'img/gym.jpg' %}" alt="">
+                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">INQUIRE</small>
+                            </div>
+                            <div class="p-4 mt-2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0">Fitness Center</h5>
+                                </div>
+                                <p class="text-body mb-3">"Embark on a journey to wellness at Zen Fitness, where tailored workouts and serene ambiance unite for a rejuvenating experience."</p>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endblock content %}

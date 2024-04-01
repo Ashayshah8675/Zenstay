@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header mb-5 p-0" style="background-image: url({% static 'img/carousel-2.jpg' %});">
+            <div class="container-fluid page-header-inner py-5">
+                <div class="container text-center pb-5">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">ACTIVITIES</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Activities</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+        <!-- Booking Start -->
+
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="row g-2">
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="{% static 'img/event-1.jpg' %}">
+                            </div>
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="{% static 'img/event-2.jpg' %}" style="margin-top: 25%;">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="{% static 'img/event-3.jpg' %}">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="{% static 'img/event-4.jpg' %}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h5 class="section-title ff-secondary text-start text-primary fw-normal">Activities & Adventure Center</h5>
+                        <h1 class="mb-4"><span class="text-primary text-uppercase"></span>Zen Adventure</h1>
+                        <p class="mb-4">
+                            "Discover tranquility amidst thrilling adventures at Zen Adventure, our resort's vibrant activities center. Dive into a world of exhilarating experiences, from serene yoga sessions to heart-pounding outdoor excursions, all designed to invigorate your mind, body, and spirit."</p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="container-xxl py-5 px-0 wow zoomIn" data-wow-delay="0.1s">
+            <div class="row g-0">
+                <div class="col-md-6 bg-dark d-flex align-items-center">
+                    <div class="p-5">
+                        <h6 class="section-title text-start text-white text-uppercase mb-3">EXPLORE</h6>
+                        <h1 class="text-white mb-4">Adventure & Explore Together.</h1>
+                        <p class="text-white mb-4">"Experience with our Zen-inspired Adventure and Exploring Activities oasis blending modern elegance and serene ambiance, perfect for unforgettable experience."</p>
+                        <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">View More</a>
+                        <a href="" class="btn btn-light py-md-3 px-md-5">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="image">
+                        <img src="{% static 'img/event-retreat.jpg' %}" width="800" height="400" class="img-fluid" data-bs-target="#imageModal">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase">ADVENTURE CENTER</h6>
+                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">ACTIVITIES</span></h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="{% static 'img/hiking.jpg' %}" alt="">
+                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">INQUIRE</small>
+                            </div>
+                            <div class="p-4 mt-2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0">Hiking</h5>
+                                </div>
+                                <p class="text-body mb-3">Embark on an unforgettable hiking adventure through rugged terrain and breathtaking vistas, where every step unveils a new thrill and connection to nature's wonders.</p>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="{% static 'img/bungee.jpg' %}" alt="">
+                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">INQUIRE</small>
+                            </div>
+                            <div class="p-4 mt-2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0">Bungee Jumping</h5>
+                                </div> 
+                                <p class="text-body mb-4">Bungee jumping at Zen Adventure offers an exhilarating plunge into the abyss, combining adrenaline-pumping free fall with the serenity of nature's embrace admist serene weather.</p>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="{% static 'img/atv.jpg' %}" alt="">
+                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">INQUIRE</small>
+                            </div>
+                            <div class="p-4 mt-2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0">ATV Riding</h5>
+                                </div>
+                                <p class="text-body mb-3">ATV riding unleashes the thrill of off-road exploration, allowing riders to gear up with their helmets, conquer rugged terrain and embrace the adventure of the great outdoors.</p>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endblock content %}

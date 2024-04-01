@@ -1,0 +1,79 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<div class="container-fluid p-0 mb-5">
+  <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          class="w-100"
+          src="{% static 'img/carousel-3.jpg' %}"
+          alt="Image"
+        />
+        <div
+          class="carousel-caption d-flex flex-column align-items-center justify-content-center"
+        >
+          <div class="container-fluid py-5">
+            <div class="container py-5">
+              <div class="text-center mb-3 pb-3">
+                <h6
+                  class="text-primary text-uppercase"
+                  style="letter-spacing: 5px"
+                >
+                  ZENSTAY
+                </h6>
+                <h1 style="color: rgb(255, 255, 255)">
+                  Welcome to your Zen Account.
+                </h1>
+              </div>
+              <div class="container pb-5 mt-5">
+                <!-- Profile Page Start -->
+
+                <div class="row mt-3">
+                  <div class="col">
+                    <header>
+                      {% if user.is_authenticated %}
+                      <p>
+                        <a
+                          href="{% url 'change_password' %}"
+                          class="btn btn-primary btn-sm"
+                          >Change Password</a>
+                        |
+                        <a href="{% url 'logout' %}" class="btn btn-danger btn-sm">Logout</a>
+                      </p>
+                      {% endif %}
+                    </header>
+                  </div>
+                </div>
+
+                <div class="row mt-3">
+                  <div class="col">
+                    <h2 style="color: rgb(255, 255, 255)">
+                      Welcome {{ user.username }}!
+                    </h2>
+                    <p>First Name: {{ user.userprofile.fname }}</p>
+                    <p>Last Name: {{ user.userprofile.lname }}</p>
+                    <p>Bio: {{ user.userprofile.bio }}</p>
+                    <p>Email: {{ user.userprofile.email }}</p>
+                    <p>Birthdate: {{ user.userprofile.birthdate }}</p>
+                    <p>Contact: {{ user.userprofile.contact }}</p>
+                    <p>Gender: {{ user.userprofile.gender }}</p>
+                    <p>Address: {{ user.userprofile.address }}</p>
+                  </div>
+                </div>
+
+                <div class="row mt-3">
+                  <div class="col">
+                    <a href="{% url 'edit_profile_user' %}" class="btn btn-info">Edit Profile</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Privacy End -->
+              <br /><br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
