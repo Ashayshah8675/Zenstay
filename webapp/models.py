@@ -72,17 +72,7 @@ class bookingdetailform(models.Model):
   roomnum = models.IntegerField(null=True)
   request = models.TextField(null=True)
   
-class Register(models.Model):
-  fname = models.CharField(max_length = 100)
-  lname = models.CharField(max_length = 100)
-  email = models.EmailField(null=True)
-  username = models.CharField(max_length = 100)
-  password1 = models.CharField(max_length = 100)
-  password2 = models.CharField(max_length = 100)
-
-  def str(self): 
-        return f"{self.name}"
- 
+  
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE,default=1)
     fname = models.CharField(max_length=50)
@@ -103,7 +93,16 @@ class eventdetailform(models.Model):
   date = models.DateField(null=True)
   
   
+class Register(models.Model):
+  fname = models.CharField(max_length = 100)
+  lname = models.CharField(max_length = 100)
+  email = models.EmailField(null=True)
+  username = models.CharField(max_length = 100)
+  password1 = models.CharField(max_length = 100)
+  password2 = models.CharField(max_length = 100)
 
+  def str(self): 
+        return f"{self.fname}"
     
 
 
